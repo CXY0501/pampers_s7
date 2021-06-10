@@ -11,7 +11,14 @@
       </div>
     </div>
     <div class="content">
-      <div class="kv"></div>
+      <div class="kv">
+        <div class="kv02"><img src="../assets/img/kv-02.png" alt=""></div>
+        <div class="kv03"><img src="../assets/img/kv-03.png" alt=""></div>
+        <div class="kv04"><img src="../assets/img/kv-04.png" alt=""></div>
+        <div class="kv05"><img src="../assets/img/kv-05.png" alt=""></div>
+        <div class="kv06"><img src="../assets/img/kv-06.png" alt=""></div>
+        <div class="kv07"><img src="../assets/img/kv-07.png" alt=""></div>
+      </div>
       <div class="kv"></div>
     </div>
   </div>
@@ -59,6 +66,7 @@ body{
   height: 875px;
   margin: 0 auto;
   padding: 0;
+  overflow: visible;
 }
 
 .content .kv{
@@ -74,4 +82,40 @@ body{
   background-repeat: no-repeat;
 }
 
+.kv02{
+  position:absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.kv03{
+  position:absolute;
+  top: 25%;
+  left: 5%;
+}
+
+.kv04{
+  position:absolute;
+  top: 42%;
+  left: 20%;
+}
+
+.kv05{
+  position:absolute;
+  top: 20%;
+  right: 5%;
+}
+
+
+.kv06{
+  position:absolute;
+  bottom: -10%;
+  left: 10%;
+}
+
+.kv07{
+  position:absolute;
+  bottom: -10%;
+  right: 5%;
+}
 </style>
