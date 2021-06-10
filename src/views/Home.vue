@@ -19,7 +19,16 @@
         <div class="kv06"><img src="../assets/img/kv-06.png" alt=""></div>
         <div class="kv07"><img src="../assets/img/kv-07.png" alt=""></div>
       </div>
-      <!-- <div class="kv"></div> -->
+      <div class="step2">
+        <div class="step2title"><img src="../assets/img/step2-title-02.png" alt=""></div>\
+        <div class="shopping">
+          <ul>
+            <li><img src="../assets/img/step-2-02.png" alt=""></li>
+            <li><img src="../assets/img/step-2-03.png" alt=""></li>
+            <li><img src="../assets/img/step-2-04.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -117,5 +126,16 @@ body{
   position:absolute;
   bottom: -15%;
   right: 6%;
+}
+
+.step2{
+  background-image: url(../assets/img/step-2-bg-02.png);
+  position: relative;
+  /* width: 100%; */
+  height: 100%;
+  padding: 0;
+  margin-top: 20%;
+  background-position: center 0;
+  background-repeat: no-repeat;
 }
 </style>
