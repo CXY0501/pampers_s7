@@ -19,7 +19,7 @@
         <div class="kv06"><img src="../assets/img/kv-06.png" alt=""></div>
         <div class="kv07"><img src="../assets/img/kv-07.png" alt=""></div>
       </div>
-      <div class="kv"></div>
+      <!-- <div class="kv"></div> -->
     </div>
   </div>
 </template>
@@ -109,13 +109,13 @@ body{
 
 .kv06{
   position:absolute;
-  bottom: -10%;
-  left: 10%;
+  bottom: -15%;
+  left: 5%;
 }
 
 .kv07{
   position:absolute;
-  bottom: -10%;
-  right: 5%;
+  bottom: -15%;
+  right: 6%;
 }
 </style>
