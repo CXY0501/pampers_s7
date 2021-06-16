@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div @click="test">
+      <h1>hahahaahahahhahahahahahahahahahahaahahahahahahahahahahahahahahahaha</h1>
+    </div>
     <div class="wrap">
       <div class="menu">
         <li><img src="../assets/img/btn-02.png" alt=""></li>
@@ -23,9 +26,15 @@
         <div class="step2title"><img src="../assets/img/step2-title-02.png" alt=""></div>
         <div class="shopping">
           <ul>
-            <li><img src="../assets/img/step-2-02.png" alt=""></li>
-            <li><img src="../assets/img/step-2-03.png" alt=""></li>
-            <li><img src="../assets/img/step-2-04.png" alt=""></li>
+            <li @mouseover="shield"><img src="../assets/img/step-2-02.png" alt="">
+              <span :style="active"></span>
+            </li>
+            <li @mouseover="shield"><img src="../assets/img/step-2-03.png" alt="">
+              <span></span>
+            </li>
+            <li @mouseover="shield"><img src="../assets/img/step-2-04.png" alt="">
+              <span></span>
+            </li>
           </ul>
         </div>
       </div>
@@ -49,7 +58,21 @@
 
 export default {
   name: 'Home',
+  data(){
+   return{
+     active:""
+   }
+  },
   components: {
+  },
+  methods:{
+    test(){
+      console.log('------------------------------------------');
+    },
+    shield(){
+      console.log('mouseover--------')
+      this.active = 'background-color:pink'
+    }
   }
 }
 </script>
@@ -151,6 +174,7 @@ body{
 }
 .shopping li{
   display: inline-block;
+  position: relative;
 }
 
 .step3title{
@@ -158,5 +182,17 @@ body{
   /* top: -5%; */
   margin-top: -45px;
   left: 25%;
+}
+
+.shopping span{
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  width: 70%;
+  height: 200px;
+  /* background-image: url(../assets/img/step-2-05.png); */
+  background-position: center 0;
+  background-repeat: no-repeat;
 }
 </style>
