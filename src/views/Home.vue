@@ -1,8 +1,5 @@
 <template>
   <div class="home">
-    <div @click="test">
-      <h1>hahahaahahahhahahahahahahahahahahaahahahahahahahahahahahahahahahaha</h1>
-    </div>
     <div class="wrap">
       <div class="menu">
         <li><img src="../assets/img/btn-02.png" alt=""></li>
@@ -66,9 +63,6 @@ export default {
   components: {
   },
   methods:{
-    test(){
-      console.log('------------------------------------------');
-    },
     shield(){
       console.log('mouseover--------')
       this.active = 'background-color:pink'
@@ -89,7 +83,7 @@ body{
    left:0;
    right:0;
    top:0;
-   bottom:0;
+   /* bottom:0; */
    z-index: 999;
 }
 
