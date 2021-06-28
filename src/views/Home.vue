@@ -23,14 +23,12 @@
         <div class="step2title"><img src="../assets/img/step2-title-02.png" alt=""></div>
         <div class="shopping">
           <ul>
-            <li @mouseover="shield"><img src="../assets/img/step-2-02.png" alt="">
-              <span :style="active"></span>
-            </li>
-            <li @mouseover="shield"><img src="../assets/img/step-2-03.png" alt="">
-              <span></span>
-            </li>
-            <li @mouseover="shield"><img src="../assets/img/step-2-04.png" alt="">
-              <span></span>
+            <li v-for="item in step2" 
+            :key="item.id" 
+            @mouseover="shield(item.id)" 
+            @mouseleave="open(item.id)">
+              <img :src="item.src" alt="">
+              <span :class="{active: item.id === selected}"></span>
             </li>
           </ul>
         </div>
@@ -57,15 +55,36 @@ export default {
   name: 'Home',
   data(){
    return{
-     active:""
+     active:"",
+     isTrue: false,
+     selected: '0',
+     step2:[
+       {
+          id: "1",
+          src: require("../assets/img/step-2-02.png")
+       },
+       {
+         id:"2",
+         src: require("../assets/img/step-2-03.png")
+       },
+       {
+         id:"3",
+         src: require("../assets/img/step-2-04.png")
+       }
+     ]
    }
   },
   components: {
   },
   methods:{
-    shield(){
-      console.log('mouseover--------')
-      this.active = 'background-color:pink'
+    shield(id){
+      // console.log('mouseover--------')
+      this.active = 'active'
+      this.selected = id
+    },
+    open(id){
+      this.active = ''
+      this.selected = '0'
     }
   }
 }
@@ -188,5 +207,8 @@ body{
   /* background-image: url(../assets/img/step-2-05.png); */
   background-position: center 0;
   background-repeat: no-repeat;
+}
+.active {
+  background-image:url(../assets/img/step-2-05.png);
 }
 </style>
